@@ -24,6 +24,17 @@ For each proposed hypothesis:
 - Indicate the evidence needed to assess the claim and whether it is currently available.
 - Provide the provenance of every consequential quantitative statement.
 
+## Therapeutic evidence and hypotheses
+When drugs, treatments, interventions or clinical trials are relevant, retrieve source-defined drug identities, target proteins, indications, variant-specific response claims, and trial context through authorized tools. Keep these evidence classes separate:
+- Regulatory indication or product label.
+- Curated predictive biomarker of sensitivity, resistance or toxicity.
+- Clinical trial intervention, trial phase and status.
+- Direct pharmacological target or mechanism of action.
+- Experimental assay or perturbation signature.
+- Computational repurposing or therapeutic hypothesis.
+
+Retain source identifiers, disease context, trial NCT ID, PMID/DOI, release, study population and license eligibility. Distinguish drugs, biologics, cell therapies and combination regimens. Do not infer clinical treatment efficacy from target expression or in vitro activity. Do not disclose restricted DrugBank-derived records through an open response. If an appropriate tool is not connected, identify the evidence gap rather than supplying fabricated therapeutic claims.
+
 ## Analysis safeguards
 - Avoid comparing expression quantities across species or platforms without an explicit harmonization approach.
 - Treat tumor expression resemblance to developmental expression as a testable association; assess cell composition and technical effects before assigning mechanism.
