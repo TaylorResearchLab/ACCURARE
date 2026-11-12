@@ -1,24 +1,149 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
-  <title>ACCURARE | Biomedical Discovery</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ACCURARE integrates human development, childhood cancer, and rare disease evidence for scientific discovery.">
+  <meta name="theme-color" content="#102c40">
+  <link rel="canonical" href="https://accurare.org/">
+  <title>ACCURARE | Human Development, Childhood Cancer & Rare Diseases</title>
+  <style>
+    :root { --navy:#102c40; --navy2:#17475b; --mint:#7dd8cd; --ink:#17374a; --muted:#547081; --line:#dbe6ea; --soft:#f4f8f9; }
+    *, *::before, *::after { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.65; }
+    a { color:inherit; } a:focus-visible { outline:3px solid #20a99e; outline-offset:4px; }
+    .wrap { width:min(1150px,calc(100% - 48px)); margin:auto; }
+    header { background:var(--navy); color:white; border-bottom:1px solid #ffffff22; }
+    header .wrap { display:flex; justify-content:space-between; align-items:center; gap:24px; min-height:78px; }
+    .brand { display:flex; align-items:center; gap:12px; text-decoration:none; font-size:1.1rem; font-weight:800; letter-spacing:.16em; }
+    .brand svg { width:34px; height:34px; } nav { display:flex; flex-wrap:wrap; gap:25px; }
+    nav a { color:#d4e5ec; text-decoration:none; font-weight:600; font-size:.85rem; } nav a:hover { color:var(--mint); }
+    .hero { background:radial-gradient(ellipse at 72% 35%,#1d5569,#13364b 43%,#102c40 82%); color:#fff; }
+    .hero-grid { display:grid; grid-template-columns:1.06fr .94fr; gap:24px; align-items:center; min-height:555px; padding-block:70px; }
+    .eyebrow { color:var(--mint); font-size:.74rem; text-transform:uppercase; letter-spacing:.145em; font-weight:800; }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { font-size:clamp(2.5rem,5.2vw,4.65rem); letter-spacing:-.052em; line-height:1.09; margin:21px 0 24px; }
+    .hero p { color:#d2e4ec; font-size:1.07rem; max-width:590px; }
+    .buttons { display:flex; flex-wrap:wrap; gap:12px; margin-top:29px; }
+    .button { padding:12px 20px; border-radius:6px; text-decoration:none; font-size:.91rem; font-weight:750; }
+    .button.primary { background:var(--mint); color:#113449; } .button.secondary { border:1px solid #80a7b4; color:white; }
+    .button:hover { filter:brightness(1.09); }
+    .caption { font-size:.79rem; margin-top:20px; color:#adcbd5; }
+    .network { width:100%; height:auto; max-width:540px; display:block; margin:auto; }
+    .section { padding-block:88px; } .soft { background:var(--soft); }
+    .section-title { font-size:clamp(1.9rem,3.3vw,2.68rem); letter-spacing:-.038em; line-height:1.18; margin:12px 0 20px; }
+    .lead { max-width:830px; font-size:1.06rem; color:var(--muted); margin-bottom:32px; }
+    .cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+    .card, .tile { background:white; border:1px solid var(--line); border-radius:12px; padding:27px; }
+    .card .mark { display:grid; place-items:center; width:44px; height:44px; border-radius:10px; background:#e0f4f0; color:#137d75; font-weight:800; font-size:1.2rem; margin-bottom:21px; }
+    h3 { font-size:1.12rem; line-height:1.35; margin-bottom:11px; }
+    .card p, .tile p { color:var(--muted); font-size:.94rem; margin-bottom:0; }
+    .studio { display:grid; grid-template-columns:1.05fr .95fr; align-items:center; gap:44px; background:var(--navy); padding:44px; border-radius:16px; color:white; }
+    .studio h2 { font-size:clamp(1.8rem,3.2vw,2.48rem); letter-spacing:-.035em; line-height:1.2; margin:13px 0 19px; }
+    .studio p, .studio ul { color:#d1e3ea; } .studio ul { padding-left:22px; font-size:.94rem; }
+    .demo { border-radius:12px; background:#f8fcfb; padding:24px; color:#16394c; border:1px solid #bfdbd7; }
+    .demohead { display:flex; align-items:center; justify-content:space-between; gap:12px; padding-bottom:14px; border-bottom:1px solid #d3e6e2; font-weight:800; font-size:.89rem; }
+    .tag { border:1px solid #b3d1d0; color:#466d75; border-radius:20px; padding:4px 10px; font-size:.7rem; white-space:nowrap; }
+    .question { background:#e6f4f1; border-radius:8px; padding:17px; font-size:.91rem; margin:18px 0; }
+    .reply { border-left:3px solid #4ab1a4; padding-left:14px; font-size:.9rem; } .reply small { display:block; color:#66818a; margin-top:11px; }
+    .tiles { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:17px; }
+    .tile a { color:#1d787a; font-weight:700; font-size:.89rem; text-underline-offset:3px; }
+    .tile p { margin-bottom:12px; }
+    .hint { background:#e4f3f0; padding:24px; border-radius:11px; margin-top:24px; }
+    .hint p { margin:8px 0 0; color:#3f6370; }
+    footer { background:var(--navy); color:#d5e6ed; padding-block:40px; }
+    footer .wrap { display:flex; justify-content:space-between; flex-wrap:wrap; gap:25px; align-items:center; }
+    footer p { margin:5px 0 0; color:#afc9d5; font-size:.83rem; } footer a { font-size:.87rem; }
+    @media(max-width:820px) { .hero-grid,.studio { grid-template-columns:1fr; } .hero-grid { padding-block:55px 40px; } .network { max-width:500px; } header .wrap { flex-direction:column; align-items:flex-start; padding-block:17px; gap:13px; } }
+    @media(max-width:600px) { .wrap { width:min(100% - 36px,1150px); } nav { gap:14px; } nav a { font-size:.78rem; } .section { padding-block:61px; } .cards,.tiles { grid-template-columns:1fr; } .studio { padding:26px; } h1 { font-size:2.65rem; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
 </head>
 <body>
-  <h1>ACCURARE</h1>
-  <p>
-    Connecting Childhood Cancer,
-    Developmental Biology,
-    and Rare Diseases
-  </p>
-  <p>
-    An open scientific resource for
-    exploring molecular mechanisms
-    across human disease.
-  </p>
-  <p>Research tools and data coming soon.</p>
+  <header>
+    <div class="wrap">
+      <a class="brand" href="#home" aria-label="ACCURARE home">
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M7 27L18 8 33 18 23 33 7 27Z" stroke="#7dd8cd" stroke-width="2"/><path d="M7 27L33 18M18 8L23 33M10 17L30 29" stroke="#7dd8cd" stroke-width="1.4"/><g fill="#b7f5e9"><circle cx="7" cy="27" r="3"/><circle cx="18" cy="8" r="3"/><circle cx="33" cy="18" r="3"/><circle cx="23" cy="33" r="3"/></g></svg>
+        ACCURARE
+      </a>
+      <nav aria-label="Main navigation"><a href="#science">Research</a><a href="#studio">Hypothesis Studio</a><a href="#explore">Explore</a><a href="#resources">Data &amp; Methods</a><a href="#about">About</a></nav>
+    </div>
+  </header>
+  <main id="home">
+    <section class="hero" aria-labelledby="hero-title"><div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Human development · Childhood cancer · Rare diseases</div>
+        <h1 id="hero-title">Discovering connections across human disease.</h1>
+        <p>ACCURARE connects pediatric cancer genomics, human and nonhuman primate developmental expression, and rare disease evidence to investigate shared genes, pathways, and molecular mechanisms.</p>
+        <div class="buttons"><a class="button primary" href="#science">Explore the science</a><a class="button secondary" href="#studio">Hypothesis Studio</a></div>
+        <div class="caption">An emerging scientific resource. Explorers and AI services are in development.</div>
+      </div>
+      <svg class="network" viewBox="0 0 540 480" role="img" aria-label="Abstract network of biological relationships connecting molecular clusters">
+        <defs><radialGradient id="glow"><stop stop-color="#55c8bd" stop-opacity=".22"/><stop offset="1" stop-color="#55c8bd" stop-opacity="0"/></radialGradient></defs>
+        <circle cx="274" cy="235" r="210" fill="url(#glow)"/>
+        <g stroke="#70b5c2" stroke-opacity=".39" stroke-width="1.4">
+          <path d="M82 125L193 88 270 163 365 88 464 144 402 245 477 341 335 387 257 311 135 365 82 252 193 88M82 125L270 163 402 245 335 387 135 365 82 125M193 88L257 311 464 144M82 252L270 163 335 387M135 365L402 245 365 88M257 311L477 341M193 88L402 245M82 252L464 144"/>
+        </g><g stroke="#9cece2" stroke-opacity=".7" stroke-width="1.5"><path d="M270 163L257 311 402 245 270 163M270 163L365 88"/></g>
+        <g fill="#68c9c3"><circle cx="82" cy="125" r="7"/><circle cx="193" cy="88" r="8"/><circle cx="365" cy="88" r="7"/><circle cx="464" cy="144" r="8"/><circle cx="477" cy="341" r="6"/><circle cx="135" cy="365" r="8"/><circle cx="82" cy="252" r="5"/></g>
+        <g fill="#b8f7e9"><circle cx="270" cy="163" r="14"/><circle cx="402" cy="245" r="11"/><circle cx="257" cy="311" r="13"/><circle cx="335" cy="387" r="10"/></g>
+        <g fill="#9dd9dd" opacity=".75"><circle cx="124" cy="192" r="3"/><circle cx="235" cy="45" r="3"/><circle cx="342" cy="171" r="4"/><circle cx="427" cy="398" r="3"/><circle cx="212" cy="415" r="3"/><circle cx="55" cy="326" r="3"/><circle cx="484" cy="225" r="3"/></g>
+      </svg>
+    </div></section>
+
+    <section class="section" id="science"><div class="wrap">
+      <div class="eyebrow">Scientific questions</div><h2 class="section-title">Study disease through the biology of development.</h2>
+      <p class="lead">Developmental gene regulation provides a framework for investigating both inherited disorders and childhood cancer. ACCURARE aims to connect genomic evidence with the anatomical, cellular, and temporal context in which genes act.</p>
+      <div class="cards">
+        <article class="card"><div class="mark" aria-hidden="true">01</div><h3>Shared genes and mechanisms</h3><p>Investigate genes implicated in developmental disorders and pediatric tumors. Distinguish germline disease associations from somatic cancer alterations.</p></article>
+        <article class="card"><div class="mark" aria-hidden="true">02</div><h3>Developmental expression</h3><p>Compare embryonic, fetal, and pediatric gene expression across human tissues and nonhuman primate references.</p></article>
+        <article class="card"><div class="mark" aria-hidden="true">03</div><h3>Evidence-based discovery</h3><p>Integrate disease phenotypes, molecular pathways, and publications to formulate testable biological hypotheses.</p></article>
+      </div>
+    </div></section>
+
+    <section class="section soft" id="studio"><div class="wrap"><div class="studio">
+      <div>
+        <div class="eyebrow">Future research application</div>
+        <h2>ACCURARE Hypothesis Studio</h2>
+        <p>A proposed AI research environment where investigators work with language models to develop, compare, and evaluate biological hypotheses using ACCURARE evidence.</p>
+        <ul><li>Retrieve relevant gene, disease, and developmental evidence.</li><li>Generate competing mechanisms and measurable predictions.</li><li>Link every substantive claim to sources and data releases.</li><li>Export a structured record for independent evaluation.</li></ul>
+        <p><strong>Planned access:</strong> a reusable AI skill and an authenticated, read-only MCP connection. Researchers could connect compatible AI clients using their own accounts. A separate sponsored service may be offered later.</p>
+      </div>
+      <div class="demo" aria-label="Illustrative Hypothesis Studio interaction">
+        <div class="demohead"><span>Research question</span><span class="tag">Concept preview</span></div>
+        <div class="question">Which developmental gene programs are active in pediatric tumors and associated with congenital disorders?</div>
+        <div class="reply"><strong>Proposed analysis</strong><p>Compare tumor expression signatures against developmental reference profiles. Identify intersecting disease genes, then evaluate pathway enrichment and anatomical specificity.</p><small>Illustrative workflow, not an analysis result. Tool in development.</small></div>
+      </div>
+    </div></div></section>
+
+    <section class="section" id="explore"><div class="wrap">
+      <div class="eyebrow">Scientific exploration</div><h2 class="section-title">Explore genes, developmental context, and disease.</h2>
+      <p class="lead">The initial explorers will provide validated, versioned results. More complex questions will use a private evidence service without direct access to the complete DDKG.</p>
+      <div class="cards">
+        <article class="card"><div class="mark" aria-hidden="true">G</div><h3>Developmental Gene Explorer</h3><p>Gene expression across embryonic, fetal, and pediatric tissues alongside cancer and rare disease evidence. <strong>In development.</strong></p></article>
+        <article class="card"><div class="mark" aria-hidden="true">C</div><h3>Childhood Cancer Explorer</h3><p>Connections between pediatric tumor molecular programs and developmental biology. <strong>In development.</strong></p></article>
+        <article class="card"><div class="mark" aria-hidden="true">D</div><h3>Disease Connections</h3><p>Curated genetic disease associations, phenotypes, and shared molecular mechanisms. <strong>In development.</strong></p></article>
+      </div>
+    </div></section>
+
+    <section class="section soft" id="resources"><div class="wrap">
+      <div class="eyebrow">Foundational resources</div><h2 class="section-title">Integrating evidence from established research resources.</h2>
+      <p class="lead">ACCURARE builds on research datasets and independently maintained knowledge resources. Each published analysis will identify its sources, versions, processing methods, and provenance.</p>
+      <div class="tiles">
+        <article class="tile"><h3>OpenPedCan</h3><p>Pediatric cancer genomic and transcriptomic research supporting tumor analyses.</p><a href="https://github.com/d3b-center/OpenPedCan-analysis" target="_blank" rel="noopener noreferrer">OpenPedCan analysis repository</a></article>
+        <article class="tile"><h3>dGTEx and developmental atlases</h3><p>Pediatric tissue expression and human and nonhuman primate embryonic and fetal datasets, subject to their respective data access and release conditions.</p></article>
+        <article class="tile"><h3>DevMap-CHD</h3><p>Developmental disease gene memberships and source provenance, beginning with congenital heart defects.</p><a href="https://github.com/TaylorResearchLab/DevMap-CHD" target="_blank" rel="noopener noreferrer">DevMap-CHD repository</a></article>
+        <article class="tile"><h3>DDKG and PAR/PAD</h3><p>Evidence integration, knowledge graph relationships, and portable assertion representations for traceable scientific analyses.</p><a href="https://github.com/TaylorResearchLab/PAD" target="_blank" rel="noopener noreferrer">Portable Assertions Database</a></article>
+      </div>
+      <div class="hint"><strong>Publication model</strong><p>Public releases will contain reviewed summaries and licensed data products. Private analysis services will return bounded results through authenticated APIs or MCP tools. Model credentials and private Neo4j connections remain on secured infrastructure.</p></div>
+    </div></section>
+
+    <section class="section" id="about"><div class="wrap">
+      <div class="eyebrow">About ACCURARE</div><h2 class="section-title">Careful integration. Reproducible discovery.</h2>
+      <p class="lead">ACCURARE is an emerging scientific initiative from the Taylor Research Lab. Its goal is to investigate relationships among human development, childhood cancer, and rare genetic diseases using integrated molecular evidence and computational tools.</p>
+      <a class="button primary" href="https://github.com/TaylorResearchLab/ACCURARE">View the ACCURARE repository</a>
+    </div></section>
+  </main>
+  <footer><div class="wrap"><div><strong>ACCURARE</strong><p>Connecting human development, childhood cancer, and rare diseases.</p></div><a href="https://github.com/TaylorResearchLab/ACCURARE">Source repository</a></div></footer>
 </body>
 </html>
